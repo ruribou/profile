@@ -121,15 +121,10 @@
   }
 }
 
+html, body {
+  background-color: #1e3a8a;
+}
+
 html {
   scroll-behavior: smooth;
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.7; }
-  50% { opacity: 1; }
-}
-
-.animate-twinkle {
-  animation: twinkle 2.5s infinite ease-in-out;
 }
