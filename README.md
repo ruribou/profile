@@ -11,5 +11,4 @@ ruribou のプロフィールサイトです。できるだけシンプルに作
 - Next.js
 - Tailwind CSS
 - TypeScript
-- Shadcn UI
 - Vercel
