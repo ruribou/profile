@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Profile | Ryota Asai",
-  description: "Welcome to my portfolio website. I showcase my projects and skills here.",
+  title: "Profile | りょうさん",
+  description: "ソフトウェアエンジニアのりょうさんのプロフィールサイトです",
   icons: {
     icon: "/favicon.ico",
   },
