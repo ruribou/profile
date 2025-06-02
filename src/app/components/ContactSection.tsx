@@ -6,7 +6,7 @@ const contactData = [
   {
     platform: "Email",
     handle: "ruribou@hotmail.com",
-    url: "mailto:ryotaasai177@example.com",
+    url: "ruribou@hotmail.com",
     icon: <SiMaildotru className="w-6 h-6 text-red-500" />,
     description: "お仕事のご依頼やご相談はこちら",
     color: "hover:bg-red-50 hover:border-red-200"
