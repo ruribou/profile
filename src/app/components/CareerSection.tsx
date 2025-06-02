@@ -10,7 +10,7 @@ const careerData = [
     icon: <FaGraduationCap className="w-6 h-6" />,
     color: "bg-green-600",
     borderColor: "border-green-500",
-    url: "https://www.dendai.ac.jp/"
+    url: "https://www.kamlab.rd.dendai.ac.jp"
   },
   {
     period: "2024 / 8 - 2024 / 8",
