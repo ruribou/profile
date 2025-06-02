@@ -14,18 +14,21 @@ const AboutSection = () => (
         <div className="flex items-center justify-center space-x-8 text-xl text-blue-100 py-2 mb-4">
           <div className="flex items-center space-x-2">
             <FiMapPin className="w-5 h-5" />
-            <span>神奈川県相模原市</span>
+            <span className="text-base sm:text-xl">神奈川県相模原市</span>
           </div>
           <div className="flex items-center space-x-2">
             <FiBriefcase className="w-5 h-5" />
-            <span>大学生エンジニア</span>
+            <span className="text-base sm:text-xl">大学生エンジニア</span>
           </div>
         </div>
       </div>
-      <p className="max-w-2xl mx-auto text-lg text-blue-200">
-        埼玉の山奥で学生エンジニアをしています。<br />
-        Ruby on Rails を中心にバックエンド開発をしています。<br />
+      <p className="mx-auto text-sm sm:text-lg text-blue-200 max-w-xs sm:max-w-2xl">
+        埼玉の山奥で大学生をしています。Rubyistです。<br/>
         他にも、技術コミュニティの運営、NPO法人の運営もしています。
+      </p>
+      <p className="mx-auto text-sm sm:text-lg text-blue-200 max-w-xs sm:max-w-2xl">
+        趣味はアイドルマスター、写真撮影、プロ野球観戦です。<br/>
+        新しい技術を学ぶことが好きです。
       </p>
       <div className="flex justify-center space-x-6 pt-4">
         <a 

@@ -1,6 +1,6 @@
 import React from "react";
 import { SiGo, SiRubyonrails, SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiMysql, SiPostgresql, SiRedis, SiDocker, SiAmazon, SiCloudflare, SiVuedotjs, SiSass } from "react-icons/si";
-import { Server, Globe, Database } from "lucide-react";
+import { Server, FileCode2, Database } from "lucide-react";
 
 const skillsData = [
   {
@@ -16,7 +16,7 @@ const skillsData = [
   },
   {
     category: "フロントエンド開発",
-    icon: <Globe className="w-8 h-8 text-blue-600" />,
+    icon: <FileCode2 className="w-8 h-8 text-blue-600" />,
     skills: [
       { name: "React", icon: <SiReact className="text-sky-400 w-6 h-6" /> },
       { name: "Next.js", icon: <SiNextdotjs className="text-black w-6 h-6" /> },
