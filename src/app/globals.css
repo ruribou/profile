@@ -121,6 +121,10 @@
   }
 }
 
+html, body {
+  background-color: #1e3a8a; /* Tailwindのbg-blue-900の色 */
+}
+
 html {
   scroll-behavior: smooth;
 }
