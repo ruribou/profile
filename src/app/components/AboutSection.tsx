@@ -34,7 +34,7 @@ const AboutSection = () => (
           rel="noopener noreferrer"
           className="flex items-center space-x-2 bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300"
         >
-          <X className="w-5 h-5" />
+          <Twitter className="w-5 h-5" />
           <span>@ryosan177</span>
         </a>
         <a
