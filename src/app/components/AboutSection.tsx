@@ -1,21 +1,21 @@
-import { Github, X, Mail, MapPin, Briefcase } from "lucide-react";
+import { Github, X, Twitter, MapPin, Briefcase } from "lucide-react";
 
 const AboutSection = () => (
   <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-800 text-white">
     <div className="container mx-auto px-4 py-16 text-center space-y-6">
       <img
-        src="/public/favicon.ico"
+        src="/images/IMG_8792.PNG"
         alt="Ryota Asai"
         className="w-32 h-32 rounded-full mx-auto shadow-lg object-cover"
       />
       <div>
-        <h1 className="text-5xl font-bold mb-2">Ryota Asai</h1>
-        <div className="flex items-center justify-center space-x-4 text-xl text-blue-100">
-          <div className="flex items-center space-x-1">
+        <h1 className="text-5xl font-bold mb-4">Ryota Asai</h1>
+        <div className="flex items-center justify-center space-x-8 text-xl text-blue-100 py-2 mb-4">
+          <div className="flex items-center space-x-2">
             <MapPin className="w-5 h-5" />
             <span>神奈川県相模原市</span>
           </div>
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-2">
             <Briefcase className="w-5 h-5" />
             <span>大学生エンジニア</span>
           </div>
@@ -25,7 +25,7 @@ const AboutSection = () => (
         埼玉の山奥で学生エンジニアをしています。<br />
         エンジニアとしては、Ruby on Railsを中心にバックエンド開発をしています。<br />
         CA Tech Loungeなどでも活動中です。<br />
-        エンジニア以外に、技術コミュニティの運営、NPO法人の運営もしています。
+        他にも、技術コミュニティの運営、NPO法人の運営もしています。
       </p>
       <div className="flex justify-center space-x-6 pt-4">
         <a 
