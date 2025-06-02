@@ -30,7 +30,6 @@ const skillsData = [
     category: "その他ツール",
     icon: <Database className="w-8 h-8 text-blue-600" />,
     skills: [
-      { name: "Redis", icon: <SiRedis className="text-red-600 w-6 h-6" /> },
       { name: "Docker", icon: <SiDocker className="text-blue-400 w-6 h-6" /> },
       { name: "AWS", icon: <SiAmazon className="text-yellow-500 w-6 h-6" /> },
       { name: "Cloudflare", icon: <SiCloudflare className="text-orange-400 w-6 h-6" /> },

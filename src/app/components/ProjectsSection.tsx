@@ -8,7 +8,6 @@ const ProjectsSection = () => (
         {[1, 2, 3].map((project) => (
           <div key={project} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition duration-300">
             <div className="relative h-48 bg-gray-200">
-              {/* Add project image here */}
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">プロジェクト {project}</h3>

@@ -1,4 +1,5 @@
-import { Github, X, Twitter, MapPin, Briefcase } from "lucide-react";
+import { FiMapPin, FiBriefcase } from "react-icons/fi";
+import { SiGithub, SiX } from "react-icons/si";
 
 const AboutSection = () => (
   <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-800 text-white">
@@ -12,11 +13,11 @@ const AboutSection = () => (
         <h1 className="text-5xl font-bold mb-4">Ryota Asai</h1>
         <div className="flex items-center justify-center space-x-8 text-xl text-blue-100 py-2 mb-4">
           <div className="flex items-center space-x-2">
-            <MapPin className="w-5 h-5" />
+            <FiMapPin className="w-5 h-5" />
             <span>神奈川県相模原市</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Briefcase className="w-5 h-5" />
+            <FiBriefcase className="w-5 h-5" />
             <span>大学生エンジニア</span>
           </div>
         </div>
@@ -34,7 +35,7 @@ const AboutSection = () => (
           rel="noopener noreferrer"
           className="flex items-center space-x-2 bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300"
         >
-          <Twitter className="w-5 h-5" />
+          <SiX className="w-5 h-5" />
           <span>@ryosan177</span>
         </a>
         <a
@@ -43,7 +44,7 @@ const AboutSection = () => (
           rel="noopener noreferrer"
           className="flex items-center space-x-2 bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300"
         >
-          <Github className="w-5 h-5" />
+          <SiGithub className="w-5 h-5" />
           <span>@ruribou</span>
         </a>
       </div>

@@ -1,30 +1,47 @@
 import React from "react";
-import { Mail, Twitter, Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { SiMaildotru, SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
 
 const contactData = [
   {
     platform: "Email",
-    handle: "ruribou@hotmail.com",
-    url: "mailto:ruribou@hotmail.com",
-    icon: <Mail className="w-6 h-6" />,
-    description: "ご連絡やご相談はこちらから",
+    handle: "ryotaasai177@example.com",
+    url: "mailto:ryotaasai177@example.com",
+    icon: <SiMaildotru className="w-6 h-6 text-red-500" />,
+    description: "お仕事のご依頼やご相談はこちら",
     color: "hover:bg-red-50 hover:border-red-200"
   },
   {
-    platform: "Twitter",
+    platform: "X",
     handle: "@ryosan177",
     url: "https://x.com/ryosan177",
-    icon: <Twitter className="w-6 h-6" />,
-    description: "日々の活動について発信しています",
+    icon: <SiX className="w-6 h-6 text-blue-400" />,
+    description: "日々の学習や技術について発信",
     color: "hover:bg-blue-50 hover:border-blue-200"
   },
   {
     platform: "GitHub",
     handle: "@ruribou",
     url: "https://github.com/ruribou",
-    icon: <Github className="w-6 h-6" />,
+    icon: <SiGithub className="w-6 h-6 text-gray-800" />,
     description: "プロジェクトやコードをご覧いただけます",
     color: "hover:bg-gray-50 hover:border-gray-200"
+  },
+  {
+    platform: "Qiita",
+    handle: "@ruribou",
+    url: "https://qiita.com/ruribou",
+    icon: <SiQiita className="w-6 h-6 text-green-500" />,
+    description: "技術記事やナレッジを投稿しています",
+    color: "hover:bg-green-50 hover:border-green-200"
+  },
+  {
+    platform: "Zenn",
+    handle: "@eng_ryosan",
+    url: "https://zenn.dev/eng_ryosan",
+    icon: <SiZenn className="w-6 h-6 text-blue-400" />,
+    description: "技術記事や学びをシェアしています",
+    color: "hover:bg-blue-50 hover:border-blue-200"
   }
 ];
 
@@ -65,4 +82,4 @@ const ContactSection = () => (
   </section>
 );
 
-export default ContactSection; 
+export default ContactSection;
