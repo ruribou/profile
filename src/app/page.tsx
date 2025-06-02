@@ -14,6 +14,9 @@ export default function Home() {
         <CareerSection />
         <ContactSection />
       </main>
+      <footer className="w-full py-6 bg-blue-900 text-white text-center text-sm">
+        © 2025 ruribou. All rights reserved.
+      </footer>
     </>
   );
 }

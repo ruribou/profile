@@ -11,30 +11,30 @@ const careerData = [
     color: "bg-green-700"
   },
   {
-    period: "2022 / 8",
+    period: "2024 / 8",
     title: "エンジニアインターン（エキサイトホールディングス株式会社）",
-    description: "学生エンジニアインターン「Boost!」に参加。SaaS事業部でVue.jsからReact.jsでの一部機能のリプレイス業務に携わった。",
+    description: "学生エンジニアインターン「Boost!」に参加。SaaS事業部でVue.jsからReact.jsでの一部機能のリプレイス業務に携わりました。",
     icon: <FiBriefcase className="w-6 h-6" />,
     color: "bg-pink-700"
   },
   {
     period: "2024 / 9 - present",
     title: "エンジニアインターン（Lovegraph Inc.）",
-    description: "システムの新機能開発・改修を担当。フルスタックに近い立ち回りでプロダクト開発に貢献。",
+    description: "システムの新機能開発・改修を担当。フルスタックに近い立ち回りでプロダクト開発に携わっています。",
     icon: <FiBriefcase className="w-6 h-6" />,
     color: "bg-pink-700"
   },
   {
     period: "2025 / 4 - present",
     title: "NxTEND",
-    description: "新規事業推進室にて、未開拓の地方の地域コミュニティの開拓を行なっています。",
+    description: "新規事業推進室にて、地方で地域コミュニティの開拓を行なっています。",
     icon: <FiUsers className="w-6 h-6" />,
     color: "bg-purple-700"
   },
   {
     period: "2025 / 6 - present",
     title: "CA Tech Lounge",
-    description: "自主学習が足りないと感じ、インプットを増やすために、CA Tech Loungeというコミュニティに参加しました。",
+    description: "自主学習が足りないと感じ、インプットを増やすために、CA Tech Lounge というコミュニティに参加しました。",
     icon: <PiBookOpenTextLight className="w-6 h-6" />,
     color: "bg-yellow-700"
   },

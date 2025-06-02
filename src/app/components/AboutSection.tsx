@@ -24,8 +24,7 @@ const AboutSection = () => (
       </div>
       <p className="max-w-2xl mx-auto text-lg text-blue-200">
         埼玉の山奥で学生エンジニアをしています。<br />
-        エンジニアとしては、Ruby on Railsを中心にバックエンド開発をしています。<br />
-        CA Tech Loungeなどでも活動中です。<br />
+        Ruby on Rails を中心にバックエンド開発をしています。<br />
         他にも、技術コミュニティの運営、NPO法人の運営もしています。
       </p>
       <div className="flex justify-center space-x-6 pt-4">
