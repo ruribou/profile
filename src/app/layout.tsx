@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Your Name",
+  title: "Profile | Ryota Asai",
   description: "Welcome to my portfolio website. I showcase my projects and skills here.",
   icons: {
     icon: "/favicon.ico",
