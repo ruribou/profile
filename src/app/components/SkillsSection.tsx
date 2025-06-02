@@ -9,6 +9,8 @@ const skillsData = [
     skills: [
       { name: "Go", icon: <SiGo className="text-cyan-500 w-7 h-7" /> },
       { name: "Ruby on Rails", icon: <SiRubyonrails className="text-red-500 w-7 h-7" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-700 w-6 h-6" /> },
+      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-800 w-6 h-6" /> },
     ],
     highlight: true,
   },
@@ -25,11 +27,9 @@ const skillsData = [
     ],
   },
   {
-    category: "データベース・インフラ",
+    category: "その他ツール",
     icon: <Database className="w-8 h-8 text-blue-600" />,
     skills: [
-      { name: "MySQL", icon: <SiMysql className="text-blue-700 w-6 h-6" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-800 w-6 h-6" /> },
       { name: "Redis", icon: <SiRedis className="text-red-600 w-6 h-6" /> },
       { name: "Docker", icon: <SiDocker className="text-blue-400 w-6 h-6" /> },
       { name: "AWS", icon: <SiAmazon className="text-yellow-500 w-6 h-6" /> },

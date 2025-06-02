@@ -4,7 +4,7 @@
 
 ruribou のプロフィールサイトです。できるだけシンプルに作成しているつもりです。
 拡張性を持たせるために、React ではなく、Next.js を使用しています。
-一旦このサイトは Ver1.0 として、Cloudflare Pages にデプロイしています。
+このサイトは Ver 1.0 として、Vercel にデプロイしています。
 
 ## 技術スタック
 
@@ -12,4 +12,4 @@ ruribou のプロフィールサイトです。できるだけシンプルに作
 - Tailwind CSS
 - TypeScript
 - Shadcn UI
-- Cloudflare Pages
+- Vercel
