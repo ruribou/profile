@@ -23,9 +23,9 @@ const skillsData = [
 ];
 
 const SkillsSection = () => (
-  <section className="py-20 bg-blue-50">
+  <section id="skills" className="py-20 bg-blue-50">
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">スキル</h2>
+      <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">Skills</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {skillsData.map((skillCategory) => (
           <div key={skillCategory.category} className="p-6 bg-white border border-blue-100 rounded-lg shadow-sm hover:shadow-md transition duration-300">

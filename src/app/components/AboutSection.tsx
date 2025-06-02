@@ -1,7 +1,7 @@
 import { Github, X, Twitter, MapPin, Briefcase } from "lucide-react";
 
 const AboutSection = () => (
-  <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-800 text-white">
+  <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-800 text-white">
     <div className="container mx-auto px-4 py-16 text-center space-y-6">
       <img
         src="/images/IMG_8792.PNG"
