@@ -24,11 +24,12 @@ const AboutSection = () => (
       </div>
       <p className="mx-auto text-sm sm:text-lg text-white max-w-xs sm:max-w-2xl">
         埼玉の山奥で大学生をしています。Rubyistです。<span className="hidden sm:inline"><br/></span>
-        他にも、技術コミュニティの運営、NPO法人の運営もしています。
+        技術コミュニティの運営、NPO法人の運営もしています。<span className="hidden sm:inline"><br/></span>
+        <span className="font-bold underline">技術は目的ではなく、手段である</span>ということを大切にしています。
       </p>
       <p className="mx-auto text-sm sm:text-lg text-white max-w-xs sm:max-w-2xl">
-        趣味はアイドルマスター、写真撮影、プロ野球観戦です。<span className="hidden sm:inline"><br/></span>
-        新しい技術を学ぶことが好きです。
+        趣味はアイドルマスター、写真撮影、プロ野球観戦などです。<span className="hidden sm:inline"><br/></span>
+        横浜DeNAベイスターズと市川雛菜が好きです。
       </p>
     </div>
   </section>
