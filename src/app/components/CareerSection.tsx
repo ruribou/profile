@@ -27,7 +27,7 @@ const careerData = [
     icon: <FiBriefcase className="w-6 h-6" />,
     color: "bg-blue-600",
     borderColor: "border-blue-500",
-    url: "https://lovegraph.me/"
+    url: "https://corporate.lovegraph.me"
   },
   {
     period: "2025 / 4 - present",
