@@ -10,7 +10,7 @@ const AboutSection = () => (
         className="w-32 h-32 rounded-full mx-auto shadow-lg object-cover"
       />
       <div>
-        <h1 className="text-5xl font-bold mb-4">Ryota Asai</h1>
+        <h1 className="text-5xl font-bold mb-4">りょうさん</h1>
         <div className="flex items-center justify-center space-x-8 text-xl text-blue-100 py-2 mb-4">
           <div className="flex items-center space-x-2">
             <FiMapPin className="w-5 h-5" />
