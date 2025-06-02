@@ -32,7 +32,7 @@ const careerData = [
     color: "bg-purple-700"
   },
   {
-    period: "2025 / 4 - present",
+    period: "2025 / 6 - present",
     title: "CA Tech Lounge",
     description: "自主学習が足りないと感じ、インプットを増やすために、CA Tech Loungeというコミュニティに参加しました。",
     icon: <PiBookOpenTextLight className="w-6 h-6" />,
