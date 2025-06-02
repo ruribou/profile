@@ -15,9 +15,9 @@ const contactData = [
     platform: "X",
     handle: "@ryosan177",
     url: "https://x.com/ryosan177",
-    icon: <SiX className="w-6 h-6 text-blue-400" />,
+    icon: <SiX className="w-6 h-6 text-gray-800" />,
     description: "日々の活動について発信",
-    color: "hover:bg-blue-50 hover:border-blue-200"
+    color: "hover:bg-blue-50 hover:border-gray-200"
   },
   {
     platform: "GitHub",
