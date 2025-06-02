@@ -31,4 +31,4 @@ const ProjectsSection = () => (
   </section>
 );
 
-export default ProjectsSection; 
+export default ProjectsSection;
