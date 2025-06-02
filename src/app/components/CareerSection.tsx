@@ -1,4 +1,4 @@
-import { GraduationCap, Building, MapPin, Briefcase, Users, BookOpenText } from "lucide-react";
+import { GraduationCap, Briefcase, Users, BookOpenText } from "lucide-react";
 
 const careerData = [
   {
@@ -7,6 +7,13 @@ const careerData = [
     description: "IoE/M2Mソリューション研究室に所属。WebARとAIを用いた案内型システムの構築を行っています。",
     icon: <GraduationCap className="w-6 h-6" />,
     color: "bg-green-700"
+  },
+  {
+    period: "2022 / 8",
+    title: "エンジニアインターン（エキサイトホールディングス株式会社）",
+    description: "学生エンジニアインターン「Boost!」に参加。SaaS事業部でVue.jsからReact.jsでの一部機能のリプレイス業務に携わった。",
+    icon: <Briefcase className="w-6 h-6" />,
+    color: "bg-pink-700"
   },
   {
     period: "2024 / 9 - present",
