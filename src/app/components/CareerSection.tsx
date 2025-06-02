@@ -19,8 +19,8 @@ const careerData = [
     organization: "エキサイトホールディングス株式会社",
     description: "学生エンジニアインターン「Boost!」に参加。SaaS事業部でVue.jsからReact.jsでの一部機能のリプレイス業務に携わりました。",
     icon: <FiBriefcase className="w-6 h-6" />,
-    color: "bg-pink-600",
-    borderColor: "border-pink-500",
+    color: "bg-red-600",
+    borderColor: "border-red-500",
   },
   {
     period: "2024 / 9 - present",
@@ -28,8 +28,8 @@ const careerData = [
     organization: "Lovegraph Inc.",
     description: "システムの新機能開発・改修を担当。フルスタックに近い立ち回りでプロダクト開発に携わっています。",
     icon: <FiBriefcase className="w-6 h-6" />,
-    color: "bg-blue-600",
-    borderColor: "border-blue-500",
+    color: "bg-gray-900",
+    borderColor: "border-gray-900",
     url: "https://corporate.lovegraph.me"
   },
   {
