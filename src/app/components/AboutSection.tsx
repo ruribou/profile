@@ -18,7 +18,7 @@ const AboutSection = () => (
           </div>
           <div className="flex items-center space-x-2">
             <FiBriefcase className="w-5 h-5" />
-            <span className="text-base sm:text-xl">大学生エンジニア</span>
+            <span className="text-base sm:text-xl">学生エンジニア</span>
           </div>
         </div>
       </div>
