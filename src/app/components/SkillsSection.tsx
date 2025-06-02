@@ -9,7 +9,7 @@ const skillsData = [
     description: "モダンなフロントエンド技術を使用したレスポンシブなWeb開発"
   },
   {
-    category: "バックエンド開発", 
+    category: "バックエンド開発",
     icon: <Server className="w-8 h-8 text-blue-600" />,
     skills: ["Node.js", "Python", "Go", "Ruby on Rails"],
     description: "スケーラブルなAPIとサーバーサイドアプリケーションの構築"

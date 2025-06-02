@@ -1,4 +1,4 @@
-import { Github, Twitter, Mail, MapPin, Briefcase } from "lucide-react";
+import { Github, X, Mail, MapPin, Briefcase } from "lucide-react";
 
 const AboutSection = () => (
   <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 to-blue-800 text-white">
@@ -29,16 +29,16 @@ const AboutSection = () => (
       </p>
       <div className="flex justify-center space-x-6 pt-4">
         <a 
-          href="https://x.com/ryosan177" 
-          target="_blank" 
+          href="https://x.com/ryosan177"
+          target="_blank"
           rel="noopener noreferrer"
           className="flex items-center space-x-2 bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300"
         >
-          <Twitter className="w-5 h-5" />
+          <X className="w-5 h-5" />
           <span>@ryosan177</span>
         </a>
-        <a 
-          href="https://github.com/ruribou" 
+        <a
+          href="https://github.com/ruribou"
           target="_blank" 
           rel="noopener noreferrer"
           className="flex items-center space-x-2 bg-blue-800 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300"
