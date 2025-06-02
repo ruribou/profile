@@ -45,7 +45,7 @@ const careerData = [
     icon: <PiBookOpenTextLight className="w-6 h-6" />,
     color: "bg-orange-600",
     borderColor: "border-orange-500",
-    url: "https://cyberagent.ai/techlounge/"
+    url: "https://www.cyberagent.co.jp/careers/special/students/tech_lounge/"
   },
 ];
 
