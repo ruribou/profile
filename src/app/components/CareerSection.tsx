@@ -5,16 +5,18 @@ import { PiBookOpenTextLight } from "react-icons/pi";
 const careerData = [
   {
     period: "2022 / 4 - present",
-    title: "学生（東京電機大学）",
+    title: "学生",
+    organization: "東京電機大学",
     description: "IoE/M2Mソリューション研究室に所属。WebARとAIを用いた案内型システムの構築を行っています。",
     icon: <FaGraduationCap className="w-6 h-6" />,
-    color: "bg-green-600",
-    borderColor: "border-green-500",
+    color: "bg-blue-600",
+    borderColor: "border-blue-500",
     url: "https://www.kamlab.rd.dendai.ac.jp"
   },
   {
     period: "2024 / 8 - 2024 / 8",
-    title: "エンジニアインターン（エキサイトホールディングス株式会社）",
+    title: "エンジニアインターン",
+    organization: "エキサイトホールディングス株式会社",
     description: "学生エンジニアインターン「Boost!」に参加。SaaS事業部でVue.jsからReact.jsでの一部機能のリプレイス業務に携わりました。",
     icon: <FiBriefcase className="w-6 h-6" />,
     color: "bg-pink-600",
@@ -22,7 +24,8 @@ const careerData = [
   },
   {
     period: "2024 / 9 - present",
-    title: "エンジニアインターン（Lovegraph Inc.）",
+    title: "エンジニアインターン",
+    organization: "Lovegraph Inc.",
     description: "システムの新機能開発・改修を担当。フルスタックに近い立ち回りでプロダクト開発に携わっています。",
     icon: <FiBriefcase className="w-6 h-6" />,
     color: "bg-blue-600",
@@ -31,20 +34,22 @@ const careerData = [
   },
   {
     period: "2025 / 4 - present",
-    title: "NxTEND",
-    description: "新規事業推進室にて、地方で地域コミュニティの開拓を行なっています。",
+    title: "新規事業推進室",
+    organization: "NxTEND",
+    description: "地方で地域コミュニティの開拓を行なっています。",
     icon: <FiUsers className="w-6 h-6" />,
-    color: "bg-purple-600",
-    borderColor: "border-purple-500",
+    color: "bg-gray-900",
+    borderColor: "border-gray-900",
     url: "https://www.nxtend.or.jp/"
   },
   {
     period: "2025 / 6 - present",
-    title: "CA Tech Lounge",
+    title: "メイン会員",
+    organization: "CA Tech Lounge",
     description: "自主学習が足りないと感じ、インプットを増やすために、CA Tech Lounge というコミュニティに参加しました。",
     icon: <PiBookOpenTextLight className="w-6 h-6" />,
-    color: "bg-orange-600",
-    borderColor: "border-orange-500",
+    color: "bg-green-600",
+    borderColor: "border-green-500",
     url: "https://www.cyberagent.co.jp/careers/special/students/tech_lounge/"
   },
 ];
@@ -75,9 +80,14 @@ const CareerSection = () => (
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-4 mb-3">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {item.title}
-                    </h3>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {item.title}
+                      </h3>
+                      <p className="font-semibold text-gray-800 mt-1">
+                        {item.organization}
+                      </p>
+                    </div>
                     {item.url && (
                       <a
                         href={item.url}

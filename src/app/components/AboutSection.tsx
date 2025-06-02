@@ -14,11 +14,11 @@ const AboutSection = () => (
         <div className="flex items-center justify-center space-x-8 text-xl text-blue-100 py-2 mb-4">
           <div className="flex items-center space-x-2">
             <FiMapPin className="w-5 h-5" />
-            <span className="text-base sm:text-xl">神奈川県相模原市</span>
+            <span className="text-base sm:text-xl font-bold text-white">神奈川県相模原市</span>
           </div>
           <div className="flex items-center space-x-2">
             <FiBriefcase className="w-5 h-5" />
-            <span className="text-base sm:text-xl">学生エンジニア</span>
+            <span className="text-base sm:text-xl font-bold text-white">学生エンジニア</span>
           </div>
         </div>
       </div>

@@ -50,7 +50,6 @@ const ContactSection = () => (
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center text-blue-800 mb-6">Contact</h2>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        ご連絡やご相談は以下からお願いします。<br />
         お気軽にご連絡ください。
       </p>
       <div className="max-w-2xl mx-auto">
