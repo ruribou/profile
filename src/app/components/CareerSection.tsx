@@ -50,7 +50,7 @@ const careerData = [
 ];
 
 const CareerSection = () => (
-  <section id="career" className="py-20 bg-blue-50">
+  <section id="career" className="py-20 bg-white">
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">
         Career
