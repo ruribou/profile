@@ -55,7 +55,6 @@ const CareerSection = () => (
       <h2 className="text-3xl font-bold text-center text-blue-800 mb-12">
         Career
       </h2>
-      
       <div className="max-w-4xl mx-auto space-y-8">
         {careerData.map((item, idx) => (
           <div 
