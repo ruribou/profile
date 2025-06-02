@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Twitter, Github, MessageSquare, ExternalLink } from "lucide-react";
+import { Mail, Twitter, Github, ExternalLink } from "lucide-react";
 
 const contactData = [
   {
@@ -7,7 +7,7 @@ const contactData = [
     handle: "ruribou@hotmail.com",
     url: "mailto:ruribou@hotmail.com",
     icon: <Mail className="w-6 h-6" />,
-    description: "お仕事のご依頼やご相談はこちら",
+    description: "ご連絡やご相談はこちらから",
     color: "hover:bg-red-50 hover:border-red-200"
   },
   {
@@ -15,7 +15,7 @@ const contactData = [
     handle: "@ryosan177",
     url: "https://x.com/ryosan177",
     icon: <Twitter className="w-6 h-6" />,
-    description: "日々の学習や技術について発信",
+    description: "日々の活動について発信しています",
     color: "hover:bg-blue-50 hover:border-blue-200"
   },
   {
@@ -33,8 +33,8 @@ const ContactSection = () => (
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center text-blue-800 mb-6">Contact</h2>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        お仕事のご相談や技術についての質問など、お気軽にお声がけください。<br />
-        レスポンシブで迅速にお返事いたします。
+        ご連絡やご相談は以下からお願いします。<br />
+        お気軽にご連絡ください。
       </p>
       <div className="max-w-2xl mx-auto">
         <div className="grid gap-6">
