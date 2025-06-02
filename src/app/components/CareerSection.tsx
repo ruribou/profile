@@ -2,7 +2,7 @@ import { GraduationCap, Building, MapPin, Briefcase, Users, BookOpenText } from 
 
 const careerData = [
   {
-    period: "2022 - present",
+    period: "2022 / 4 - present",
     title: "学生 (東京電機大学)",
     description: "IoE/M2Mソリューション研究室に所属。WebARとAIを用いた案内型システムの構築を行っています。",
     icon: <GraduationCap className="w-6 h-6" />,
@@ -10,7 +10,7 @@ const careerData = [
   },
   {
     period: "2024 / 9 - present",
-    title: "エンジニアインターン (株式会社ラブグラフ)",
+    title: "エンジニアインターン（Lovegraph Inc.）",
     description: "システムの新機能開発・改修を担当。フルスタックに近い立ち回りでプロダクト開発に貢献。",
     icon: <Briefcase className="w-6 h-6" />,
     color: "bg-pink-700"
