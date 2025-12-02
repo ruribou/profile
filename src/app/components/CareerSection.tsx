@@ -7,7 +7,7 @@ const careerData = [
     period: "2022 / 4 - present",
     title: "学生",
     organization: "東京電機大学",
-    description: "IoE/M2Mソリューション研究室に所属。WebARとAIを用いた案内型システムの構築を行っています。",
+    description: "IoE/M2Mソリューション研究室に所属。音声インターフェイスとRAGを用いた案内型システムの開発を行っています。",
     icon: <FaGraduationCap className="w-6 h-6" />,
     color: "bg-blue-600",
     borderColor: "border-blue-500",
@@ -51,6 +51,16 @@ const careerData = [
     color: "bg-green-600",
     borderColor: "border-green-500",
     url: "https://www.cyberagent.co.jp/careers/special/students/tech_lounge/"
+  },
+  {
+    period: "2025 / 9 - 2025 / 9",
+    title: "エンジニアインターン",
+    organization: "DMM.com LLC",
+    description: "DMM.comのエンジニアサマーインターンの「DMM GUILD」に参加。Golangを中心にフルスタックで横断的にプロダクト開発に携わりました。",
+    icon: <FiBriefcase className="w-6 h-6" />,
+    color: "bg-gray-900",
+    borderColor: "border-gray-900",
+    url: "https://dmm-corp.com/recruit/intern/engineer/guild/"
   },
 ];
 
