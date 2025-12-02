@@ -10,15 +10,21 @@ const AboutSection = () => (
         className="w-32 h-32 rounded-full mx-auto shadow-lg object-cover"
       />
       <div>
-        <h1 className="text-5xl font-bold mb-4">Ryota Asai</h1>
-        <div className="flex items-center justify-center space-x-8 text-xl text-blue-100 py-2 mb-4">
+        <h1 className="text-5xl font-bold mb-2">りょうさん</h1>
+        <h2 className="text-3xl font-semibold mb-4 text-blue-100">Ryota Asai</h2>
+        <div className="flex flex-col items-center justify-center space-y-4 text-xl text-blue-100 py-2 mb-4">
           <div className="flex items-center space-x-2">
             <FiMapPin className="w-5 h-5" />
             <span className="text-base sm:text-xl font-bold text-white">神奈川県相模原市</span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center justify-center gap-3 flex-wrap">
             <FiBriefcase className="w-5 h-5" />
-            <span className="text-base sm:text-xl font-bold text-white">学生+ソフトウェアエンジニア</span>
+            <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-sm sm:text-base font-semibold text-white border border-white/30">
+              学生
+            </span>
+            <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-sm sm:text-base font-semibold text-white border border-white/30">
+              ソフトウェアエンジニア
+            </span>
           </div>
         </div>
       </div>
