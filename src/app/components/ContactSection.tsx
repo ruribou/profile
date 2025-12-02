@@ -13,7 +13,7 @@ const contactData = [
   },
   {
     platform: "X",
-    handle: "@ryosan177",
+    handle: "@ruribou_swe",
     url: "https://x.com/ruribou_swe",
     icon: <SiX className="w-6 h-6 text-gray-800" />,
     description: "日々の活動について発信",
