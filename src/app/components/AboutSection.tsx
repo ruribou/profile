@@ -10,7 +10,7 @@ const AboutSection = () => (
         className="w-32 h-32 rounded-full mx-auto shadow-lg object-cover"
       />
       <div>
-        <h1 className="text-5xl font-bold mb-2">りょうさん</h1>
+        <h1 className="text-5xl font-bold mb-2">ruribou</h1>
         <h2 className="text-3xl font-semibold mb-4 text-blue-100">Ryota Asai</h2>
         <div className="flex flex-col items-center justify-center space-y-4 text-xl text-blue-100 py-2 mb-4">
           <div className="flex items-center space-x-2">
