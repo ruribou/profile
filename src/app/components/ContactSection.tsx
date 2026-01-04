@@ -16,7 +16,7 @@ const contactData = [
     handle: "@ruribou_swe",
     url: "https://x.com/ruribou_swe",
     icon: <SiX className="w-6 h-6 text-gray-800" />,
-    description: "日々の活動について発信",
+    description: "日々の活動について発信・DMも歓迎",
     color: "hover:bg-blue-50 hover:border-gray-200"
   },
   {
