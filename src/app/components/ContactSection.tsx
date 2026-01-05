@@ -5,8 +5,8 @@ import { SiMaildotru, SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
 const contactData = [
   {
     platform: "Email",
-    handle: "ruribou@hotmail.com",
-    url: "mailto:ruribou@hotmail.com",
+    handle: "ruribou.dev@gmail.com",
+    url: "mailto:ruribou.dev@gmail.com",
     icon: <SiMaildotru className="w-6 h-6 text-red-500" />,
     description: "ご連絡やご相談はこちら",
     color: "hover:bg-red-50 hover:border-red-200"
