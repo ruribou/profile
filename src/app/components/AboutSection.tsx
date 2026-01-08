@@ -1,4 +1,4 @@
-import { FiMapPin, FiBriefcase } from "react-icons/fi";
+import { FiMapPin, FiBriefcase, FiFeather } from "react-icons/fi";
 import { SiGithub, SiX } from "react-icons/si";
 
 const AboutSection = () => (
@@ -36,6 +36,32 @@ const AboutSection = () => (
       <p className="mx-auto text-sm sm:text-lg text-white max-w-xs sm:max-w-2xl">
         趣味はアイドルマスター、写真撮影、プロ野球観戦などです。<span className="hidden sm:inline"><br/></span>
       </p>
+      <div className="flex items-center justify-center gap-6 pt-4">
+        <a
+          href="https://github.com/ruribou"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-blue-200 transition-colors"
+        >
+          <SiGithub className="w-7 h-7" />
+        </a>
+        <a
+          href="https://x.com/ruribou_and"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-blue-200 transition-colors"
+        >
+          <SiX className="w-7 h-7" />
+        </a>
+        <a
+          href="https://sizu.me/ruribou"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-blue-200 transition-colors"
+        >
+          <FiFeather className="w-7 h-7" />
+        </a>
+      </div>
     </div>
   </section>
 );
