@@ -1,75 +1,95 @@
 import React from "react";
-import { ExternalLink } from "lucide-react";
-import { SiMaildotru, SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
+import { ExternalLink, Mail } from "lucide-react";
+import { SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
+import { Card, CardContent } from "@/components/ui/card";
 
 const contactData = [
   {
     platform: "Email",
     handle: "ruribou.dev@gmail.com",
     url: "mailto:ruribou.dev@gmail.com",
-    icon: <SiMaildotru className="w-6 h-6 text-red-500" />,
+    icon: <Mail className="w-5 h-5" />,
     description: "ご連絡やご相談はこちら",
-    color: "hover:bg-red-50 hover:border-red-200"
+    gradient: "from-red-500 to-rose-500",
   },
   {
     platform: "X",
     handle: "@ruribou_swe",
     url: "https://x.com/ruribou_swe",
-    icon: <SiX className="w-6 h-6 text-gray-800" />,
+    icon: <SiX className="w-5 h-5" />,
     description: "日々の活動について発信・DMも歓迎",
-    color: "hover:bg-blue-50 hover:border-gray-200"
+    gradient: "from-slate-600 to-slate-500",
   },
   {
     platform: "GitHub",
     handle: "@ruribou",
     url: "https://github.com/ruribou",
-    icon: <SiGithub className="w-6 h-6 text-gray-800" />,
+    icon: <SiGithub className="w-5 h-5" />,
     description: "公開しているコード",
-    color: "hover:bg-gray-50 hover:border-gray-200"
+    gradient: "from-slate-700 to-slate-600",
   },
   {
     platform: "Qiita",
     handle: "@ruribou",
     url: "https://qiita.com/ruribou",
-    icon: <SiQiita className="w-6 h-6 text-green-500" />,
+    icon: <SiQiita className="w-5 h-5" />,
     description: "技術記事や個人的なアウトプット",
-    color: "hover:bg-green-50 hover:border-green-200"
+    gradient: "from-emerald-500 to-green-500",
   },
   {
     platform: "Zenn",
     handle: "@eng_ryosan",
     url: "https://zenn.dev/eng_ryosan",
-    icon: <SiZenn className="w-6 h-6 text-blue-400" />,
+    icon: <SiZenn className="w-5 h-5" />,
     description: "組織でのアウトプットや活動記録",
-    color: "hover:bg-blue-50 hover:border-blue-200"
-  }
+    gradient: "from-blue-500 to-cyan-500",
+  },
 ];
 
 const ContactSection = () => (
-  <section id="contact" className="py-20 bg-white">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center text-blue-800 mb-6">Contact</h2>
+  <section id="contact" className="py-24 relative overflow-hidden">
+    {/* Background */}
+    <div className="absolute inset-0 bg-slate-900" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-cyan-900/10 via-transparent to-transparent" />
+
+    <div className="container relative z-10 mx-auto px-4">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Contact</h2>
+        <p className="text-slate-400 max-w-md mx-auto">お気軽にご連絡ください</p>
+      </div>
+
       <div className="max-w-2xl mx-auto">
-        <div className="grid gap-6">
+        <div className="grid gap-4">
           {contactData.map((contact) => (
             <a
               key={contact.platform}
               href={contact.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex items-center p-6 border border-gray-200 rounded-lg transition duration-300 ${contact.color}`}
+              className="block group"
             >
-              <div className="flex-shrink-0 mr-4">
-                {contact.icon}
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center mb-1">
-                  <h3 className="text-lg font-semibold text-gray-900">{contact.platform}</h3>
-                  <ExternalLink className="w-4 h-4 ml-2 text-gray-400" />
-                </div>
-                <p className="text-blue-600 font-medium mb-1">{contact.handle}</p>
-                <p className="text-sm text-gray-600">{contact.description}</p>
-              </div>
+              <Card className="bg-slate-800/30 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 overflow-hidden">
+                <CardContent className="p-5">
+                  <div className="flex items-center gap-4">
+                    {/* Icon */}
+                    <div
+                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${contact.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300`}
+                    >
+                      {contact.icon}
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-0.5">
+                        <h3 className="text-lg font-semibold text-white">{contact.platform}</h3>
+                        <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-400 transition-colors" />
+                      </div>
+                      <p className="text-violet-400 font-medium text-sm mb-0.5">{contact.handle}</p>
+                      <p className="text-slate-500 text-sm">{contact.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </a>
           ))}
         </div>

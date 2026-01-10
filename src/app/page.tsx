@@ -14,8 +14,12 @@ export default function Home() {
         <CareerSection />
         <ContactSection />
       </main>
-      <footer className="w-full py-6 bg-blue-900 text-white text-center text-sm">
-        © 2025 ruribou. All rights reserved.
+      <footer className="w-full py-8 bg-slate-950 border-t border-slate-800/50">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-slate-500 text-sm">
+            © 2025 ruribou. All rights reserved.
+          </p>
+        </div>
       </footer>
     </>
   );

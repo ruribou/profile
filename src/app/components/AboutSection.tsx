@@ -1,66 +1,108 @@
-import { FiMapPin, FiBriefcase, FiFeather } from "react-icons/fi";
+import { FiMapPin } from "react-icons/fi";
 import { SiGithub, SiX } from "react-icons/si";
+import { Feather } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => (
-  <section id="about" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-900 via-blue-700 to-blue-200 text-white">
-    <div className="container mx-auto px-4 py-16 text-center space-y-6">
-      <img
-        src="/images/IMG_8792.PNG"
-        alt="Ryota Asai"
-        className="w-32 h-32 rounded-full mx-auto shadow-lg object-cover"
-      />
-      <div>
-        <h1 className="text-5xl font-bold mb-2">ruribou</h1>
-        <h2 className="text-3xl font-semibold mb-4 text-blue-100">Ryota Asai</h2>
-        <div className="flex flex-col items-center justify-center space-y-4 text-xl text-blue-100 py-2 mb-4">
-          <div className="flex items-center space-x-2">
-            <FiMapPin className="w-5 h-5" />
-            <span className="text-base sm:text-xl font-bold text-white">神奈川県相模原市</span>
+  <section
+    id="about"
+    className="min-h-screen flex items-center justify-center relative overflow-hidden"
+  >
+    {/* Background with gradient mesh */}
+    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/20 via-transparent to-transparent" />
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent" />
+
+    {/* Floating orbs */}
+    <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl animate-float" />
+    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float animation-delay-200" />
+
+    <div className="container relative z-10 mx-auto px-4 py-16 text-center">
+      <div className="max-w-2xl mx-auto space-y-8">
+        {/* Avatar */}
+        <div className="animate-fade-in">
+          <Avatar className="w-36 h-36 mx-auto ring-4 ring-white/10 shadow-2xl shadow-violet-500/20">
+            <AvatarImage src="/images/IMG_8792.PNG" alt="Ryota Asai" className="object-cover" />
+            <AvatarFallback className="text-3xl bg-slate-800 text-white">RA</AvatarFallback>
+          </Avatar>
+        </div>
+
+        {/* Name */}
+        <div className="space-y-2 animate-fade-in animation-delay-200">
+          <h1 className="text-5xl md:text-6xl font-bold text-white tracking-tight">
+            ruribou
+          </h1>
+          <h2 className="text-xl md:text-2xl font-medium text-slate-400">
+            Ryota Asai
+          </h2>
+        </div>
+
+        {/* Location & Role */}
+        <div className="flex flex-col items-center gap-4 animate-fade-in animation-delay-400">
+          <div className="flex items-center gap-2 text-slate-400">
+            <FiMapPin className="w-4 h-4" />
+            <span className="text-sm font-medium">神奈川県相模原市</span>
           </div>
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <FiBriefcase className="w-5 h-5" />
-            <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-sm sm:text-base font-semibold text-white border border-white/30">
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            <Badge variant="secondary" className="bg-white/5 text-white border border-white/10 hover:bg-white/10 px-4 py-1.5">
               学生
-            </span>
-            <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-sm sm:text-base font-semibold text-white border border-white/30">
+            </Badge>
+            <Badge variant="secondary" className="bg-gradient-to-r from-violet-500/20 to-cyan-500/20 text-white border border-white/10 hover:from-violet-500/30 hover:to-cyan-500/30 px-4 py-1.5">
               ソフトウェアエンジニア
-            </span>
+            </Badge>
           </div>
         </div>
-      </div>
-      <p className="mx-auto text-sm sm:text-lg text-white max-w-xs sm:max-w-2xl">
-        埼玉の山奥で大学生をしています。<span className="hidden sm:inline"><br/></span>
-        技術コミュニティの運営、NPO法人の運営もしています。<span className="hidden sm:inline"><br/></span>
-        <span className="font-bold underline">技術は目的ではなく、手段である</span>ということを大切にしています。
-      </p>
-      <p className="mx-auto text-sm sm:text-lg text-white max-w-xs sm:max-w-2xl">
-        趣味はアイドルマスター、写真撮影、プロ野球観戦などです。<span className="hidden sm:inline"><br/></span>
-      </p>
-      <div className="flex items-center justify-center gap-6 pt-4">
-        <a
-          href="https://github.com/ruribou"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-blue-200 transition-colors"
-        >
-          <SiGithub className="w-7 h-7" />
-        </a>
-        <a
-          href="https://x.com/ruribou_and"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-blue-200 transition-colors"
-        >
-          <SiX className="w-7 h-7" />
-        </a>
-        <a
-          href="https://sizu.me/ruribou"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-blue-200 transition-colors"
-        >
-          <FiFeather className="w-7 h-7" />
-        </a>
+
+        {/* Bio */}
+        <div className="space-y-4 animate-fade-in animation-delay-600">
+          <p className="text-slate-300 leading-relaxed max-w-lg mx-auto">
+            埼玉の山奥で大学生をしています。
+            技術コミュニティの運営、NPO法人の運営もしています。
+          </p>
+          <p className="text-slate-400 text-sm leading-relaxed max-w-lg mx-auto">
+            <span className="text-white font-medium border-b border-violet-400/50">技術は目的ではなく、手段である</span>
+            ということを大切にしています。
+          </p>
+          <p className="text-slate-400 text-sm leading-relaxed max-w-lg mx-auto">
+            趣味はアイドルマスター、写真撮影、プロ野球観戦などです。
+          </p>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex items-center justify-center gap-3 pt-4 animate-fade-in animation-delay-600">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+            asChild
+          >
+            <a href="https://github.com/ruribou" target="_blank" rel="noopener noreferrer">
+              <SiGithub className="w-5 h-5" />
+            </a>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+            asChild
+          >
+            <a href="https://x.com/ruribou_and" target="_blank" rel="noopener noreferrer">
+              <SiX className="w-5 h-5" />
+            </a>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300"
+            asChild
+          >
+            <a href="https://sizu.me/ruribou" target="_blank" rel="noopener noreferrer">
+              <Feather className="w-5 h-5" />
+            </a>
+          </Button>
+        </div>
       </div>
     </div>
   </section>
