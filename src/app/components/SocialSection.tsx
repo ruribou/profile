@@ -29,14 +29,6 @@ const socialData = [
     gradient: "from-slate-700 to-slate-600",
   },
   {
-    platform: "しずかなインターネット",
-    handle: "@ruribou",
-    url: "https://sizu.me/ruribou",
-    icon: <Feather className="w-5 h-5" />,
-    description: "エッセイや日記",
-    gradient: "from-amber-500 to-orange-500",
-  },
-  {
     platform: "Qiita",
     handle: "@ruribou",
     url: "https://qiita.com/ruribou",
@@ -51,6 +43,14 @@ const socialData = [
     icon: <SiZenn className="w-5 h-5" />,
     description: "組織でのアウトプットや活動記録",
     gradient: "from-blue-500 to-cyan-500",
+  },
+  {
+    platform: "しずかなインターネット",
+    handle: "@ruribou",
+    url: "https://sizu.me/ruribou",
+    icon: <Feather className="w-5 h-5" />,
+    description: "エッセイや日記",
+    gradient: "from-amber-500 to-orange-500",
   },
 ];
 
