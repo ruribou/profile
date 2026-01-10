@@ -4,7 +4,7 @@ const MENU = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Career", href: "#career" },
-  { label: "Contact", href: "#contact" },
+  { label: "Social", href: "#social" },
 ];
 
 const Header = () => (

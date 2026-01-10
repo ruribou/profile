@@ -1,9 +1,6 @@
 import { FiMapPin } from "react-icons/fi";
-import { SiGithub, SiX } from "react-icons/si";
-import { Feather } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 const AboutSection = () => (
   <section
@@ -70,39 +67,6 @@ const AboutSection = () => (
           </p>
         </div>
 
-        {/* Social Links */}
-        <div className="flex items-center justify-center gap-3 pt-4 animate-fade-in animation-delay-600">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300"
-            asChild
-          >
-            <a href="https://github.com/ruribou" target="_blank" rel="noopener noreferrer">
-              <SiGithub className="w-5 h-5" />
-            </a>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300"
-            asChild
-          >
-            <a href="https://x.com/ruribou_and" target="_blank" rel="noopener noreferrer">
-              <SiX className="w-5 h-5" />
-            </a>
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-slate-400 hover:text-white hover:bg-white/10 transition-all duration-300"
-            asChild
-          >
-            <a href="https://sizu.me/ruribou" target="_blank" rel="noopener noreferrer">
-              <Feather className="w-5 h-5" />
-            </a>
-          </Button>
-        </div>
       </div>
     </div>
   </section>
