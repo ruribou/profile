@@ -1,17 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useMemo } from "react";
 import { ExternalLink, Mail, Feather } from "lucide-react";
 import { SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
 import { Card, CardContent } from "@/components/ui/card";
 
+// Base64エンコードされたメールアドレス（スパムボット対策）
+const ENCODED_EMAIL = "cnVyaWJvdS5kZXZAZ21haWwuY29t";
+
+// Emailは動的に生成するため、他のソーシャルリンクのみ定義
 const socialData = [
-  {
-    platform: "Email",
-    handle: "ruribou.dev@gmail.com",
-    url: "mailto:ruribou.dev@gmail.com",
-    icon: <Mail className="w-5 h-5" />,
-    description: "ご連絡やご相談はこちら",
-    gradient: "from-red-500 to-rose-500",
-  },
   {
     platform: "X",
     handle: "@ruribou_swe",
@@ -54,7 +52,27 @@ const socialData = [
   },
 ];
 
-const SocialSection = () => (
+const SocialSection = () => {
+  // クライアントサイドでメールアドレスをデコード
+  const email = useMemo(() => {
+    if (typeof window === "undefined") return "";
+    return atob(ENCODED_EMAIL);
+  }, []);
+
+  // Emailを含む全ソーシャルリンク
+  const allSocialData = useMemo(() => {
+    const emailData = {
+      platform: "Email",
+      handle: email || "Email",
+      url: email ? `mailto:${email}` : "#",
+      icon: <Mail className="w-5 h-5" />,
+      description: "ご連絡やご相談はこちら",
+      gradient: "from-red-500 to-rose-500",
+    };
+    return [emailData, ...socialData];
+  }, [email]);
+
+  return (
   <section id="social" className="py-24 relative overflow-hidden">
     {/* Background */}
     <div className="absolute inset-0 bg-slate-900" />
@@ -68,7 +86,7 @@ const SocialSection = () => (
 
       <div className="max-w-2xl mx-auto">
         <div className="grid gap-4">
-          {socialData.map((contact) => (
+          {allSocialData.map((contact) => (
             <a
               key={contact.platform}
               href={contact.url}
@@ -104,6 +122,7 @@ const SocialSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default SocialSection;
