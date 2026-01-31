@@ -6,7 +6,7 @@ import { SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
 import { Card, CardContent } from "@/components/ui/card";
 
 // Base64エンコードされたメールアドレス（スパムボット対策）
-const ENCODED_EMAIL = "bWFpbEBydXJpYm91LmNvbQ==";
+const ENCODED_EMAIL = "Y29udGFjdEBydXJpYm91LmNvbQ==";
 
 // Emailは動的に生成するため、他のソーシャルリンクのみ定義
 const socialData = [
