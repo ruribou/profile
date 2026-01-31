@@ -17,7 +17,7 @@ export default function Home() {
       <footer className="w-full py-8 bg-slate-950 border-t border-slate-800/50">
         <div className="container mx-auto px-4 text-center">
           <p className="text-slate-500 text-sm">
-            © 2025 ruribou. All rights reserved.
+            © 2025-2026 ruribou. All rights reserved.
           </p>
         </div>
       </footer>
