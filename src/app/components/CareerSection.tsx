@@ -38,7 +38,7 @@ const careerData = [
   },
   {
     period: "2025 / 4 - present",
-    title: "新規事業推進室",
+    title: "イベント事業本部 関東事業部",
     organization: "NxTEND",
     description: "地方で地域コミュニティの開拓を行なっています。",
     icon: <FiUsers className="w-5 h-5" />,
