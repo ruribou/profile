@@ -72,7 +72,7 @@ const careerData = [
     description:
       "サイバーエージェントのゲーム事業部（SGE）の株式会社アプリボットにて1ヶ月間インターンを行った。ドメイン駆動設計をベースにしたレイヤードアーキテクチャで、Go言語を使用。主にゲームの新機能開発に携わった。",
     icon: <FiBriefcase className="w-5 h-5" />,
-    gradient: "from-red-600 to-rose-500",
+    gradient: "from-emerald-500 to-teal-500",
     url: "https://www.cyberagent.co.jp/careers/students/event/detail/id=32004",
   },
 ];
