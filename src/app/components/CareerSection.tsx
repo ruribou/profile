@@ -18,7 +18,7 @@ const careerData = [
     url: "https://www.kamlab.rd.dendai.ac.jp",
   },
   {
-    period: "2024 / 8 - 2024 / 8",
+    period: "2024 / 8",
     title: "エンジニアインターン",
     organization: "エキサイトホールディングス株式会社",
     description:
@@ -56,7 +56,7 @@ const careerData = [
     url: "https://www.cyberagent.co.jp/careers/special/students/tech_lounge/",
   },
   {
-    period: "2025 / 9 - 2025 / 9",
+    period: "2025 / 9",
     title: "エンジニアインターン",
     organization: "DMM.com LLC",
     description:
