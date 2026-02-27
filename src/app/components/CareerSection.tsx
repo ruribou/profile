@@ -65,6 +65,16 @@ const careerData = [
     gradient: "from-slate-600 to-slate-500",
     url: "https://dmm-corp.com/recruit/intern/engineer/guild/",
   },
+  {
+    period: "2026 / 2",
+    title: "CA Tech Job",
+    organization: "株式会社サイバーエージェント",
+    description:
+      "サイバーエージェントのゲーム事業部（SGE）の株式会社アプリボットにて1ヶ月間インターンを行った。ドメイン駆動設計をベースにしたレイヤードアーキテクチャで、Go言語を使用。主にゲームの新機能開発に携わった。",
+    icon: <FiBriefcase className="w-5 h-5" />,
+    gradient: "from-emerald-500 to-teal-500",
+    url: "https://www.cyberagent.co.jp/careers/students/event/detail/id=32004",
+  },
 ];
 
 const CareerSection = () => (
