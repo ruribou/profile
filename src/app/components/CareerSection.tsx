@@ -40,7 +40,7 @@ const careerData = [
     period: "2025 / 4 - present",
     title: "イベント事業本部 関東事業部",
     organization: "NxTEND",
-    description: "地方で地域コミュニティの開拓を行なっています。",
+    description: "東京を中心に、関東の学生がラフに話せるエンジニアコミュニティ『Ramble』の運営をしています。事業規模を拡大していくために様々な取り組みをしています。",
     icon: <FiUsers className="w-5 h-5" />,
     gradient: "from-violet-500 to-purple-500",
     url: "https://www.nxtend.or.jp/",
