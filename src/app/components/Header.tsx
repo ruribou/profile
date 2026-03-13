@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const MENU = [
@@ -5,6 +6,7 @@ const MENU = [
   { label: "Skills", href: "#skills" },
   { label: "Career", href: "#career" },
   { label: "Social", href: "#social" },
+  { label: "Booking", href: "/booking" },
 ];
 
 const Header = () => (
@@ -21,7 +23,11 @@ const Header = () => (
               className="text-slate-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
               asChild
             >
-              <a href={item.href}>{item.label}</a>
+              {item.href.startsWith("#") ? (
+                <a href={item.href}>{item.label}</a>
+              ) : (
+                <Link href={item.href}>{item.label}</Link>
+              )}
             </Button>
           </li>
         ))}

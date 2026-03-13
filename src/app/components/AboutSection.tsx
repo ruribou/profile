@@ -1,6 +1,9 @@
+import Link from "next/link";
 import { FiMapPin } from "react-icons/fi";
+import { CalendarDays } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const AboutSection = () => (
   <section
@@ -61,6 +64,19 @@ const AboutSection = () => (
           <p className="text-slate-400 text-sm leading-relaxed max-w-lg mx-auto">
             趣味はアイドルマスター、写真撮影、プロ野球観戦などです。
           </p>
+        </div>
+
+        {/* CTA */}
+        <div>
+          <Button
+            className="bg-gradient-to-r from-violet-500 to-purple-500 hover:from-violet-600 hover:to-purple-600 text-white px-6 py-5 text-base font-medium shadow-lg shadow-violet-500/20 transition-all duration-300"
+            asChild
+          >
+            <Link href="/booking">
+              <CalendarDays className="w-4 h-4 mr-2" />
+              ミーティングを予約する
+            </Link>
+          </Button>
         </div>
 
       </div>
