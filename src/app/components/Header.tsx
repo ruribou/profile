@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const MENU = [
@@ -25,6 +27,18 @@ const Header = () => (
             </Button>
           </li>
         ))}
+        <li>
+          <Button
+            variant="ghost"
+            className="text-slate-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
+            asChild
+          >
+            <Link href="/booking">
+              <CalendarDays className="w-4 h-4 md:mr-1.5" />
+              <span className="hidden md:inline">Schedule</span>
+            </Link>
+          </Button>
+        </li>
       </ul>
     </nav>
   </header>

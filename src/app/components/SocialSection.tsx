@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useMemo } from "react";
-import { ExternalLink, Mail, Feather } from "lucide-react";
+import React, { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { ExternalLink, CalendarDays, Mail, Feather } from "lucide-react";
 import { SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -53,10 +54,10 @@ const socialData = [
 ];
 
 const SocialSection = () => {
-  // クライアントサイドでメールアドレスをデコード
-  const email = useMemo(() => {
-    if (typeof window === "undefined") return "";
-    return atob(ENCODED_EMAIL);
+  // クライアントサイドでメールアドレスをデコード（hydration mismatch防止）
+  const [email, setEmail] = useState("");
+  useEffect(() => {
+    setEmail(atob(ENCODED_EMAIL));
   }, []);
 
   // Emailを含む全ソーシャルリンク
@@ -69,7 +70,16 @@ const SocialSection = () => {
       description: "ご連絡やご相談はこちら",
       gradient: "from-red-500 to-rose-500",
     };
-    return [emailData, ...socialData];
+    const bookingData = {
+      platform: "Booking",
+      handle: "日程調整",
+      url: "/booking",
+      icon: <CalendarDays className="w-5 h-5" />,
+      description: "ミーティングのご予約はこちら",
+      gradient: "from-violet-500 to-purple-500",
+      internal: true,
+    };
+    return [emailData, bookingData, ...socialData];
   }, [email]);
 
   return (
@@ -86,14 +96,8 @@ const SocialSection = () => {
 
       <div className="max-w-2xl mx-auto">
         <div className="grid gap-4">
-          {allSocialData.map((contact) => (
-            <a
-              key={contact.platform}
-              href={contact.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block group"
-            >
+          {allSocialData.map((contact) => {
+            const cardContent = (
               <Card className="bg-slate-800/30 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 overflow-hidden">
                 <CardContent className="p-5">
                   <div className="flex items-center gap-4">
@@ -108,7 +112,9 @@ const SocialSection = () => {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-0.5">
                         <h3 className="text-lg font-semibold text-white">{contact.platform}</h3>
-                        <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-400 transition-colors" />
+                        {"internal" in contact && contact.internal ? null : (
+                          <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-400 transition-colors" />
+                        )}
                       </div>
                       <p className="text-violet-400 font-medium text-sm mb-0.5">{contact.handle}</p>
                       <p className="text-slate-500 text-sm">{contact.description}</p>
@@ -116,8 +122,24 @@ const SocialSection = () => {
                   </div>
                 </CardContent>
               </Card>
-            </a>
-          ))}
+            );
+
+            return "internal" in contact && contact.internal ? (
+              <Link key={contact.platform} href={contact.url} className="block group">
+                {cardContent}
+              </Link>
+            ) : (
+              <a
+                key={contact.platform}
+                href={contact.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+                {cardContent}
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
