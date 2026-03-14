@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const MENU = [
@@ -6,7 +7,6 @@ const MENU = [
   { label: "Skills", href: "#skills" },
   { label: "Career", href: "#career" },
   { label: "Social", href: "#social" },
-  { label: "Booking", href: "/booking" },
 ];
 
 const Header = () => (
@@ -23,14 +23,22 @@ const Header = () => (
               className="text-slate-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
               asChild
             >
-              {item.href.startsWith("#") ? (
-                <a href={item.href}>{item.label}</a>
-              ) : (
-                <Link href={item.href}>{item.label}</Link>
-              )}
+              <a href={item.href}>{item.label}</a>
             </Button>
           </li>
         ))}
+        <li>
+          <Button
+            variant="ghost"
+            className="text-slate-300 hover:text-white hover:bg-white/10 font-medium transition-all duration-200"
+            asChild
+          >
+            <Link href="/booking">
+              <CalendarDays className="w-4 h-4 md:mr-1.5" />
+              <span className="hidden md:inline">Schedule</span>
+            </Link>
+          </Button>
+        </li>
       </ul>
     </nav>
   </header>

@@ -45,7 +45,7 @@ export default function BookingPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">
-              Booking
+              Schedule a Meeting
             </h1>
             <p className="text-slate-400">
               ご都合の良い日時をお選びください
