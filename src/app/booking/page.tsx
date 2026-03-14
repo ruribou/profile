@@ -53,7 +53,7 @@ export default function BookingPage() {
           </div>
 
           <Cal
-            calLink="ruribou/30min"
+            calLink="ruribou/meeting"
             className="w-full overflow-hidden"
             config={{
               layout: "month_view",
