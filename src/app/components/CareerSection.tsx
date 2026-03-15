@@ -103,7 +103,7 @@ const CareerSection = () => (
           <div
             className="absolute left-[19px] top-4 bottom-4 w-[3px] rounded-full hidden md:block animate-line-grow"
             style={{
-              background: "linear-gradient(180deg, #64b5f6 0%, #ab47bc 30%, #ef5350 50%, #ffca28 70%, #66bb6a 85%, #42a5f5 100%)",
+              background: "linear-gradient(180deg, #64b5f6 0%, #9575cd 30%, #ec407a 50%, #9575cd 70%, #4dd0e1 100%)",
               opacity: 0.4,
             }}
           />

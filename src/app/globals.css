@@ -154,7 +154,7 @@ html {
 .prism-streaks::before {
   top: 30%;
   left: -50%;
-  background: linear-gradient(90deg, transparent, #64b5f6, #ab47bc, #ef5350, #ffca28, #66bb6a, #42a5f5, transparent);
+  background: linear-gradient(90deg, transparent, #64b5f6, #9575cd, #ec407a, #9575cd, #4dd0e1, transparent);
   transform: rotate(-12deg);
   animation-delay: 0s;
 }
@@ -162,7 +162,7 @@ html {
 .prism-streaks::after {
   top: 60%;
   left: -50%;
-  background: linear-gradient(90deg, transparent, #42a5f5, #7e57c2, #ec407a, #ffa726, #26c6da, transparent);
+  background: linear-gradient(90deg, transparent, #4dd0e1, #9575cd, #ec407a, #64b5f6, transparent);
   transform: rotate(-12deg);
   animation-delay: 4s;
   opacity: 0.25;
@@ -231,7 +231,7 @@ html {
   box-shadow: 0 8px 40px rgba(100, 100, 200, 0.08);
 }
 
-/* Rainbow bottom border on hover */
+/* Subtle bottom border on hover */
 .rainbow-border-bottom {
   position: relative;
   overflow: hidden;
@@ -244,20 +244,20 @@ html {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #64b5f6, #ab47bc, #ef5350, #ffca28, #66bb6a, #42a5f5);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  background: linear-gradient(90deg, #64b5f6, #9575cd, #ec407a, #9575cd, #4dd0e1);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .rainbow-border-bottom:hover::after {
-  transform: scaleX(1);
+  opacity: 0.7;
 }
 
 /* Section divider */
 .rainbow-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, #64b5f6 15%, #ab47bc 35%, #ef5350 50%, #ffca28 65%, #66bb6a 85%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, #64b5f6 20%, #9575cd 40%, #ec407a 60%, #4dd0e1 80%, transparent 100%);
   opacity: 0.3;
 }
 
