@@ -14,12 +14,12 @@ const Header = () => (
       <nav className="container mx-auto flex justify-between items-center py-3 px-6">
         <a
           href="#about"
-          className="hidden md:flex items-center gap-2 font-extrabold text-lg tracking-tight text-gray-800 dark:text-gray-100 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-300"
+          className="flex items-center gap-2 font-extrabold text-lg tracking-tight text-gray-800 dark:text-gray-100 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-300"
         >
           <Terminal className="w-4 h-4 text-purple-500 dark:text-purple-400" />
           ruribou
         </a>
-        <ul className="flex items-center gap-1 md:gap-1 w-full md:w-auto justify-center md:justify-end">
+        <ul className="flex items-center gap-1">
           {MENU.map((item) => (
             <li key={item.label} className="hidden md:block">
               <a
