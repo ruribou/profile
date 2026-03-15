@@ -4,146 +4,130 @@ import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { ExternalLink, CalendarDays, Mail, Feather } from "lucide-react";
 import { SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
-import { Card, CardContent } from "@/components/ui/card";
 
-// Base64エンコードされたメールアドレス（スパムボット対策）
 const ENCODED_EMAIL = "Y29udGFjdEBydXJpYm91LmNvbQ==";
 
-// Emailは動的に生成するため、他のソーシャルリンクのみ定義
 const socialData = [
   {
     platform: "X",
     handle: "@ruribou_swe",
     url: "https://x.com/ruribou_swe",
-    icon: <SiX className="w-5 h-5" />,
+    icon: <SiX className="w-4 h-4" />,
     description: "日々の活動について発信・DMも歓迎",
-    gradient: "from-slate-600 to-slate-500",
+    iconBg: "bg-gray-50 dark:bg-gray-500/10 text-gray-700 dark:text-gray-300",
   },
   {
     platform: "GitHub",
     handle: "@ruribou",
     url: "https://github.com/ruribou",
-    icon: <SiGithub className="w-5 h-5" />,
+    icon: <SiGithub className="w-4 h-4" />,
     description: "公開しているコード",
-    gradient: "from-slate-700 to-slate-600",
+    iconBg: "bg-gray-50 dark:bg-gray-500/10 text-gray-700 dark:text-gray-300",
   },
   {
     platform: "Qiita",
     handle: "@ruribou",
     url: "https://qiita.com/ruribou",
-    icon: <SiQiita className="w-5 h-5" />,
+    icon: <SiQiita className="w-4 h-4" />,
     description: "技術記事や個人的なアウトプット",
-    gradient: "from-emerald-500 to-green-500",
+    iconBg: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
   },
   {
     platform: "Zenn",
     handle: "@eng_ryosan",
     url: "https://zenn.dev/eng_ryosan",
-    icon: <SiZenn className="w-5 h-5" />,
+    icon: <SiZenn className="w-4 h-4" />,
     description: "組織でのアウトプットや活動記録",
-    gradient: "from-blue-500 to-cyan-500",
+    iconBg: "bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400",
   },
   {
     platform: "しずかなインターネット",
     handle: "@ruribou",
     url: "https://sizu.me/ruribou",
-    icon: <Feather className="w-5 h-5" />,
+    icon: <Feather className="w-4 h-4" />,
     description: "エッセイや日記",
-    gradient: "from-amber-500 to-orange-500",
+    iconBg: "bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400",
   },
 ];
 
 const SocialSection = () => {
-  // クライアントサイドでメールアドレスをデコード（hydration mismatch防止）
   const [email, setEmail] = useState("");
   useEffect(() => {
     setEmail(atob(ENCODED_EMAIL));
   }, []);
 
-  // Emailを含む全ソーシャルリンク
   const allSocialData = useMemo(() => {
     const emailData = {
       platform: "Email",
       handle: email || "Email",
       url: email ? `mailto:${email}` : "#",
-      icon: <Mail className="w-5 h-5" />,
+      icon: <Mail className="w-4 h-4" />,
       description: "ご連絡やご相談はこちら",
-      gradient: "from-red-500 to-rose-500",
+      iconBg: "bg-rose-50 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400",
     };
     const bookingData = {
       platform: "Booking",
       handle: "日程調整",
       url: "/booking",
-      icon: <CalendarDays className="w-5 h-5" />,
+      icon: <CalendarDays className="w-4 h-4" />,
       description: "ミーティングのご予約はこちら",
-      gradient: "from-violet-500 to-purple-500",
+      iconBg: "bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400",
       internal: true,
     };
     return [emailData, bookingData, ...socialData];
   }, [email]);
 
   return (
-  <section id="social" className="py-24 relative overflow-hidden">
-    {/* Background */}
-    <div className="absolute inset-0 bg-slate-900" />
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-cyan-900/10 via-transparent to-transparent" />
+    <section id="social" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[#fafafa] dark:bg-[#12121f]" />
 
-    <div className="container relative z-10 mx-auto px-4">
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Social</h2>
-        <p className="text-slate-400 max-w-md mx-auto">各種リンク・お気軽にご連絡ください</p>
+      <div className="bokeh-container">
+        <div className="bokeh w-48 h-48 bg-pink-300/15 dark:bg-pink-500/10 top-[10%] right-[5%]" style={{ animationDelay: "3s" }} />
+        <div className="bokeh w-40 h-40 bg-blue-300/15 dark:bg-blue-500/10 bottom-[15%] left-[8%]" style={{ animationDelay: "8s" }} />
       </div>
 
-      <div className="max-w-2xl mx-auto">
-        <div className="grid gap-4">
-          {allSocialData.map((contact) => {
-            const cardContent = (
-              <Card className="bg-slate-800/30 border-slate-700/50 backdrop-blur-sm hover:bg-slate-800/50 transition-all duration-300 overflow-hidden">
-                <CardContent className="p-5">
-                  <div className="flex items-center gap-4">
-                    {/* Icon */}
-                    <div
-                      className={`w-12 h-12 rounded-xl bg-gradient-to-br ${contact.gradient} flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform duration-300`}
-                    >
-                      {contact.icon}
-                    </div>
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="text-center mb-14 animate-reveal-up">
+          <p className="text-xs font-mono text-purple-400 mb-2 tracking-wider">$ open links.md</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-gray-50">Social</h2>
+          <p className="text-gray-400 mt-2 text-sm">各種リンク・お気軽にご連絡ください</p>
+        </div>
 
-                    {/* Content */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <h3 className="text-lg font-semibold text-white">{contact.platform}</h3>
-                        {"internal" in contact && contact.internal ? null : (
-                          <ExternalLink className="w-3.5 h-3.5 text-slate-500 group-hover:text-slate-400 transition-colors" />
-                        )}
-                      </div>
-                      <p className="text-violet-400 font-medium text-sm mb-0.5">{contact.handle}</p>
-                      <p className="text-slate-500 text-sm">{contact.description}</p>
-                    </div>
+        <div className="max-w-2xl mx-auto grid gap-3">
+          {allSocialData.map((contact, idx) => {
+            const inner = (
+              <div className={`glass-card rounded-2xl p-4 rainbow-border-bottom animate-reveal-up delay-${Math.min((idx + 1) * 100, 800)}`}>
+                <div className="flex items-center gap-4">
+                  <div className={`w-10 h-10 rounded-xl ${contact.iconBg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200`}>
+                    {contact.icon}
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-bold text-gray-800 dark:text-gray-100">{contact.platform}</h3>
+                      {"internal" in contact && contact.internal ? null : (
+                        <ExternalLink className="w-3 h-3 text-gray-300 dark:text-gray-600 group-hover:text-purple-400 transition-colors" />
+                      )}
+                    </div>
+                    <p className="text-gray-500 dark:text-gray-400 text-xs font-medium">{contact.handle}</p>
+                    <p className="text-gray-400 dark:text-gray-500 text-xs">{contact.description}</p>
+                  </div>
+                </div>
+              </div>
             );
 
             return "internal" in contact && contact.internal ? (
               <Link key={contact.platform} href={contact.url} className="block group">
-                {cardContent}
+                {inner}
               </Link>
             ) : (
-              <a
-                key={contact.platform}
-                href={contact.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group"
-              >
-                {cardContent}
+              <a key={contact.platform} href={contact.url} target="_blank" rel="noopener noreferrer" className="block group">
+                {inner}
               </a>
             );
           })}
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
