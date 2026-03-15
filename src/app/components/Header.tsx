@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarDays, Terminal } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 
 const MENU = [
   { label: "About", href: "#about" },
@@ -16,7 +16,6 @@ const Header = () => (
           href="#about"
           className="flex items-center gap-2 font-extrabold text-lg tracking-tight text-gray-800 dark:text-gray-100 hover:text-purple-500 dark:hover:text-purple-400 transition-colors duration-300"
         >
-          <Terminal className="w-4 h-4 text-purple-500 dark:text-purple-400" />
           ruribou
         </a>
         <ul className="flex items-center gap-1">
