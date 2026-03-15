@@ -6,8 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -44,7 +44,7 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -79,20 +79,20 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
+  --background: oklch(0.145 0.02 270);
+  --foreground: oklch(0.92 0.01 260);
+  --card: oklch(0.19 0.02 270);
+  --card-foreground: oklch(0.92 0.01 260);
+  --popover: oklch(0.19 0.02 270);
+  --popover-foreground: oklch(0.92 0.01 260);
+  --primary: oklch(0.92 0.01 260);
+  --primary-foreground: oklch(0.19 0.02 270);
+  --secondary: oklch(0.24 0.02 270);
+  --secondary-foreground: oklch(0.92 0.01 260);
+  --muted: oklch(0.24 0.02 270);
+  --muted-foreground: oklch(0.65 0.03 260);
+  --accent: oklch(0.24 0.02 270);
+  --accent-foreground: oklch(0.92 0.01 260);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
@@ -102,12 +102,12 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar: oklch(0.19 0.02 270);
+  --sidebar-foreground: oklch(0.92 0.01 260);
   --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary-foreground: oklch(0.92 0.01 260);
+  --sidebar-accent: oklch(0.24 0.02 270);
+  --sidebar-accent-foreground: oklch(0.92 0.01 260);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
@@ -118,53 +118,242 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-body), system-ui, sans-serif;
   }
 }
 
 html, body {
-  background-color: oklch(0.13 0.02 260);
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ============================================
+   PRISM / RAINBOW REFRACTION EFFECTS
+   ============================================ */
+
+.prism-streaks {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.prism-streaks::before,
+.prism-streaks::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 2px;
+  opacity: 0.4;
+  animation: streak-slide 8s ease-in-out infinite;
+}
+
+.prism-streaks::before {
+  top: 30%;
+  left: -50%;
+  background: linear-gradient(90deg, transparent, #64b5f6, #9575cd, #ec407a, #9575cd, #4dd0e1, transparent);
+  transform: rotate(-12deg);
+  animation-delay: 0s;
+}
+
+.prism-streaks::after {
+  top: 60%;
+  left: -50%;
+  background: linear-gradient(90deg, transparent, #4dd0e1, #9575cd, #ec407a, #64b5f6, transparent);
+  transform: rotate(-12deg);
+  animation-delay: 4s;
+  opacity: 0.25;
+}
+
+.dark .prism-streaks::before,
+.dark .prism-streaks::after {
+  opacity: 0.3;
+}
+
+@keyframes streak-slide {
+  0%, 100% { transform: rotate(-12deg) translateX(-5%); opacity: 0.3; }
+  50% { transform: rotate(-12deg) translateX(5%); opacity: 0.5; }
+}
+
+/* Bokeh */
+.bokeh-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bokeh {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation: bokeh-float 10s ease-in-out infinite;
+}
+
+.dark .bokeh {
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+@keyframes bokeh-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  33% { transform: translateY(-25px) scale(1.1); }
+  66% { transform: translateY(15px) scale(0.95); }
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 40px rgba(100, 120, 200, 0.08);
+  transform: translateY(-2px);
+}
+
+.dark .glass-card {
+  background: rgba(20, 20, 40, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dark .glass-card:hover {
+  background: rgba(25, 25, 50, 0.7);
+  box-shadow: 0 8px 40px rgba(100, 100, 200, 0.08);
+}
+
+/* Subtle bottom border on hover */
+.rainbow-border-bottom {
+  position: relative;
+  overflow: hidden;
+}
+
+.rainbow-border-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #64b5f6, #9575cd, #ec407a, #9575cd, #4dd0e1);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.rainbow-border-bottom:hover::after {
+  opacity: 0.7;
+}
+
+/* Section divider */
+.rainbow-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #64b5f6 20%, #9575cd 40%, #ec407a 60%, #4dd0e1 80%, transparent 100%);
+  opacity: 0.3;
+}
+
+.dark .rainbow-divider {
+  opacity: 0.2;
+}
+
+/* Terminal-style code block */
+.terminal-block {
+  background: #1e1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: var(--font-mono), monospace;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-body {
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #cdd6f4;
+}
+
+.terminal-body .comment { color: #6c7086; }
+.terminal-body .keyword { color: #cba6f7; }
+.terminal-body .string { color: #a6e3a1; }
+.terminal-body .property { color: #89b4fa; }
+.terminal-body .punctuation { color: #6c7086; }
+.terminal-body .value { color: #fab387; }
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes line-grow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+.animate-line-grow {
+  animation: line-grow 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform-origin: top;
 }
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
-.animation-delay-200 {
-  animation-delay: 200ms;
+.animate-blink {
+  animation: blink 1s step-end infinite;
 }
 
-.animation-delay-400 {
-  animation-delay: 400ms;
-}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
 
-.animation-delay-600 {
-  animation-delay: 600ms;
+.font-mono {
+  font-family: var(--font-mono), monospace;
 }
