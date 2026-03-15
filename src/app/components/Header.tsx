@@ -36,7 +36,7 @@ const Header = () => (
               className="inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-lg bg-purple-500 text-white hover:bg-purple-600 hover:shadow-lg hover:shadow-purple-300/20 dark:hover:shadow-purple-900/30 transition-all duration-300 hover:-translate-y-0.5"
             >
               <CalendarDays className="w-3.5 h-3.5" />
-              <span className="hidden md:inline">Schedule</span>
+              Schedule
             </Link>
           </li>
         </ul>
