@@ -11,13 +11,13 @@ import {
   SiMysql,
   SiPostgresql,
   SiDocker,
-  SiAmazon,
   SiCloudflare,
   SiVuedotjs,
   SiSass,
   SiJavascript,
   SiPython,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { Code, Layers, Database } from "lucide-react";
 
 const skillsData = [
@@ -55,7 +55,7 @@ const skillsData = [
       { name: "MySQL", icon: <SiMysql />, color: "text-blue-600 dark:text-blue-400" },
       { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-700 dark:text-blue-300" },
       { name: "Docker", icon: <SiDocker />, color: "text-blue-500" },
-      { name: "AWS", icon: <SiAmazon />, color: "text-amber-600 dark:text-amber-400" },
+      { name: "AWS", icon: <FaAws />, color: "text-amber-600 dark:text-amber-400" },
       { name: "Cloudflare", icon: <SiCloudflare />, color: "text-orange-500" },
     ],
   },
