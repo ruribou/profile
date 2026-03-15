@@ -5,11 +5,22 @@ import { ExternalLink } from "lucide-react";
 
 const careerData = [
   {
-    period: "2022 / 4 - present",
-    title: "学生",
+    period: "2022 / 4 - 2026 / 3",
+    title: "学士",
     organization: "東京電機大学",
     description:
       "IoE/M2Mソリューション研究室に所属。音声インターフェイスとRAGを用いた案内型システムの開発を行っています。",
+    icon: <FaGraduationCap className="w-5 h-5" />,
+    dotColor: "bg-blue-400",
+    iconBg: "bg-blue-50 dark:bg-blue-500/10 text-blue-500",
+    url: "https://www.kamlab.rd.dendai.ac.jp",
+  },
+  {
+    period: "2026 / 4 - present",
+    title: "修士",
+    organization: "東京電機大学大学院",
+    description:
+      "IoE/M2Mソリューション研究室に所属。学士課程での研究を発展させ、より高度な研究に取り組んでいます。",
     icon: <FaGraduationCap className="w-5 h-5" />,
     dotColor: "bg-blue-400",
     iconBg: "bg-blue-50 dark:bg-blue-500/10 text-blue-500",

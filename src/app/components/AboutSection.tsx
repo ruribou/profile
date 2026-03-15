@@ -57,7 +57,7 @@ const AboutSection = () => (
             </div>
             <div className="flex gap-2 flex-wrap justify-center md:justify-start">
               <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-100 dark:border-blue-500/20">
-                学生
+                大学院生
               </span>
               <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-100 dark:border-purple-500/20">
                 ソフトウェアエンジニア
