@@ -16,17 +16,6 @@ const careerData = [
     url: "https://www.kamlab.rd.dendai.ac.jp",
   },
   {
-    period: "2026 / 4 - present",
-    title: "修士",
-    organization: "東京電機大学大学院",
-    description:
-      "IoE/M2Mソリューション研究室に所属。学士課程での研究を発展させ、より高度な研究に取り組んでいます。",
-    icon: <FaGraduationCap className="w-5 h-5" />,
-    dotColor: "bg-blue-400",
-    iconBg: "bg-blue-50 dark:bg-blue-500/10 text-blue-500",
-    url: "https://www.kamlab.rd.dendai.ac.jp",
-  },
-  {
     period: "2024 / 8",
     title: "エンジニアインターン",
     organization: "エキサイトホールディングス株式会社",
@@ -89,6 +78,17 @@ const careerData = [
     dotColor: "bg-teal-400",
     iconBg: "bg-teal-50 dark:bg-teal-500/10 text-teal-500",
     url: "https://www.cyberagent.co.jp/careers/students/event/detail/id=32004",
+  },
+  {
+    period: "2026 / 4 - present",
+    title: "修士",
+    organization: "東京電機大学大学院",
+    description:
+      "IoE/M2Mソリューション研究室に所属。学士課程での研究を発展させ、より高度な研究に取り組んでいます。",
+    icon: <FaGraduationCap className="w-5 h-5" />,
+    dotColor: "bg-blue-400",
+    iconBg: "bg-blue-50 dark:bg-blue-500/10 text-blue-500",
+    url: "https://www.kamlab.rd.dendai.ac.jp",
   },
 ];
 
