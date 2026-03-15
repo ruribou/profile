@@ -16,11 +16,11 @@ const AboutSection = () => (
 
     {/* Bokeh */}
     <div className="bokeh-container">
-      <div className="bokeh w-52 h-52 bg-blue-300/30 dark:bg-blue-500/15 top-[10%] left-[5%]" style={{ animationDelay: "0s" }} />
-      <div className="bokeh w-40 h-40 bg-purple-300/25 dark:bg-purple-500/15 top-[15%] right-[10%]" style={{ animationDelay: "2s" }} />
-      <div className="bokeh w-36 h-36 bg-pink-300/20 dark:bg-pink-500/10 bottom-[20%] left-[15%]" style={{ animationDelay: "4s" }} />
-      <div className="bokeh w-44 h-44 bg-cyan-300/25 dark:bg-cyan-500/10 bottom-[10%] right-[5%]" style={{ animationDelay: "6s" }} />
-      <div className="bokeh w-28 h-28 bg-amber-300/20 dark:bg-amber-500/10 top-[45%] left-[45%]" style={{ animationDelay: "3s" }} />
+      <div className="bokeh w-52 h-52 bg-blue-300/30 dark:bg-blue-500/30 top-[10%] left-[5%]" style={{ animationDelay: "0s" }} />
+      <div className="bokeh w-40 h-40 bg-purple-300/25 dark:bg-purple-500/30 top-[15%] right-[10%]" style={{ animationDelay: "2s" }} />
+      <div className="bokeh w-36 h-36 bg-pink-300/20 dark:bg-pink-500/20 bottom-[20%] left-[15%]" style={{ animationDelay: "4s" }} />
+      <div className="bokeh w-44 h-44 bg-cyan-300/25 dark:bg-cyan-500/20 bottom-[10%] right-[5%]" style={{ animationDelay: "6s" }} />
+      <div className="bokeh w-28 h-28 bg-amber-300/20 dark:bg-amber-500/20 top-[45%] left-[45%]" style={{ animationDelay: "3s" }} />
     </div>
 
     <div className="container relative z-10 mx-auto px-4 py-16">
