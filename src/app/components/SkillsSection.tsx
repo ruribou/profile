@@ -27,10 +27,10 @@ const skillsData = [
     iconColor: "text-blue-500 bg-blue-50 dark:bg-blue-500/10",
     skills: [
       { name: "Ruby", icon: <SiRuby />, color: "text-red-500" },
+      { name: "Go", icon: <SiGo />, color: "text-cyan-600 dark:text-cyan-400" },
       { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-600 dark:text-blue-400" },
       { name: "JavaScript", icon: <SiJavascript />, color: "text-amber-500" },
       { name: "Python", icon: <SiPython />, color: "text-sky-600 dark:text-sky-400" },
-      { name: "Go", icon: <SiGo />, color: "text-cyan-600 dark:text-cyan-400" },
       { name: "C", icon: <SiC />, color: "text-gray-500 dark:text-gray-400" },
     ],
   },
