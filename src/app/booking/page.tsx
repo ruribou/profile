@@ -1,18 +1,14 @@
 "use client";
 
 import Cal, { getCalApi } from "@calcom/embed-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 export default function BookingPage() {
-  const [calTheme, setCalTheme] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    const hour = new Date().getHours();
-    const isDark = hour >= 18 || hour < 6;
-    setCalTheme(isDark ? "dark" : "light");
-  }, []);
+  const { resolvedTheme } = useTheme();
+  const calTheme = resolvedTheme === "dark" ? "dark" : "light";
 
   useEffect(() => {
     (async function () {
