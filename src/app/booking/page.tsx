@@ -49,15 +49,14 @@ export default function BookingPage() {
       {/* Header */}
       <header className="fixed top-0 right-0 w-full z-50">
         <div className="bg-white/60 dark:bg-[#1a1a2e]/70 backdrop-blur-xl border-b border-white/50 dark:border-white/5">
-          <nav className="container mx-auto flex items-center justify-between py-3 px-6">
+          <nav className="container mx-auto flex items-center py-3 px-6">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-100 px-3 py-2 rounded-lg hover:bg-white/60 dark:hover:bg-white/5 transition-all duration-200"
             >
               <ArrowLeft className="w-4 h-4" />
               Back
             </Link>
-            <span className="text-sm font-bold text-gray-800 dark:text-gray-100 tracking-tight">ruribou</span>
           </nav>
         </div>
         <div className="rainbow-divider" />
