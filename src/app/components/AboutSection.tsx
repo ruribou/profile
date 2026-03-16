@@ -71,7 +71,7 @@ const AboutSection = () => (
               技術コミュニティの運営、NPO法人の運営もしています。
             </p>
             <p className="text-gray-500 dark:text-gray-400 text-sm">
-              <span className="text-gray-800 dark:text-gray-100 font-bold border-b-2 border-purple-300 dark:border-purple-500 pb-0.5">
+              <span className="text-gray-800 dark:text-gray-100 font-bold">
                 技術は目的ではなく、手段である
               </span>
               ということを大切にしています。
