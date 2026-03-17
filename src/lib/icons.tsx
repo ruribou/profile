@@ -1,5 +1,6 @@
 import {
   SiC,
+  SiClaude,
   SiGo,
   SiRuby,
   SiRubyonrails,
@@ -7,8 +8,6 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
-  SiMysql,
-  SiPostgresql,
   SiDocker,
   SiCloudflare,
   SiVuedotjs,
@@ -29,10 +28,9 @@ import {
   Feather,
   Mail,
   CalendarDays,
-  Cloud,
   Code,
   Layers,
-  Database,
+  Wrench,
 } from "lucide-react";
 import { type ComponentType, type SVGProps } from "react";
 
@@ -48,8 +46,7 @@ const iconMap: Record<string, IconComponent> = {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
-  SiMysql,
-  SiPostgresql,
+  SiClaude,
   SiDocker,
   SiCloudflare,
   SiVuedotjs,
@@ -61,7 +58,6 @@ const iconMap: Record<string, IconComponent> = {
   SiQiita,
   SiZenn,
   // Lucide (UI)
-  Cloud,
   GraduationCap,
   Briefcase,
   Users,
@@ -72,7 +68,7 @@ const iconMap: Record<string, IconComponent> = {
   CalendarDays,
   Code,
   Layers,
-  Database,
+  Wrench,
 };
 
 export function getIcon(name: string, className?: string) {
