@@ -2,80 +2,34 @@
 
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { ExternalLink, CalendarDays, Mail, Feather } from "lucide-react";
-import { SiX, SiGithub, SiQiita, SiZenn } from "react-icons/si";
+import { ExternalLink } from "lucide-react";
+import { getIcon } from "@/lib/icons";
+import type { SocialLink } from "@/lib/types";
 
-const ENCODED_EMAIL = "Y29udGFjdEBydXJpYm91LmNvbQ==";
+const SocialSection = ({ socialData }: { socialData: SocialLink[] }) => {
+  const [decodedHandles, setDecodedHandles] = useState<Record<string, string>>({});
 
-const socialData = [
-  {
-    platform: "X",
-    handle: "@ruribou_swe",
-    url: "https://x.com/ruribou_swe",
-    icon: <SiX className="w-4 h-4" />,
-    description: "日々の活動について発信・DMも歓迎",
-    iconBg: "bg-gray-50 dark:bg-gray-500/10 text-gray-700 dark:text-gray-300",
-  },
-  {
-    platform: "GitHub",
-    handle: "@ruribou",
-    url: "https://github.com/ruribou",
-    icon: <SiGithub className="w-4 h-4" />,
-    description: "公開しているコード",
-    iconBg: "bg-gray-50 dark:bg-gray-500/10 text-gray-700 dark:text-gray-300",
-  },
-  {
-    platform: "Qiita",
-    handle: "@ruribou",
-    url: "https://qiita.com/ruribou",
-    icon: <SiQiita className="w-4 h-4" />,
-    description: "技術記事や個人的なアウトプット",
-    iconBg: "bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
-  },
-  {
-    platform: "Zenn",
-    handle: "@eng_ryosan",
-    url: "https://zenn.dev/eng_ryosan",
-    icon: <SiZenn className="w-4 h-4" />,
-    description: "組織でのアウトプットや活動記録",
-    iconBg: "bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400",
-  },
-  {
-    platform: "しずかなインターネット",
-    handle: "@ruribou",
-    url: "https://sizu.me/ruribou",
-    icon: <Feather className="w-4 h-4" />,
-    description: "エッセイや日記",
-    iconBg: "bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400",
-  },
-];
-
-const SocialSection = () => {
-  const [email, setEmail] = useState("");
   useEffect(() => {
-    setEmail(atob(ENCODED_EMAIL));
-  }, []);
+    const decoded: Record<string, string> = {};
+    for (const item of socialData) {
+      if (item.link_type === "email") {
+        decoded[item.id] = atob(item.handle);
+      }
+    }
+    setDecodedHandles(decoded);
+  }, [socialData]);
 
-  const allSocialData = useMemo(() => {
-    const emailData = {
-      platform: "Email",
-      handle: email || "Email",
-      url: email ? `mailto:${email}` : "#",
-      icon: <Mail className="w-4 h-4" />,
-      description: "ご連絡やご相談はこちら",
-      iconBg: "bg-rose-50 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400",
-    };
-    const bookingData = {
-      platform: "Booking",
-      handle: "日程調整",
-      url: "/booking",
-      icon: <CalendarDays className="w-4 h-4" />,
-      description: "ミーティングのご予約はこちら",
-      iconBg: "bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400",
-      internal: true,
-    };
-    return [emailData, bookingData, ...socialData];
-  }, [email]);
+  const resolvedData = useMemo(
+    () =>
+      socialData.map((item) => {
+        if (item.link_type === "email") {
+          const email = decodedHandles[item.id] || "Email";
+          return { ...item, handle: email, url: email ? `mailto:${email}` : "#" };
+        }
+        return item;
+      }),
+    [socialData, decodedHandles],
+  );
 
   return (
     <section id="social" className="py-24 relative overflow-hidden">
@@ -94,17 +48,17 @@ const SocialSection = () => {
         </div>
 
         <div className="max-w-2xl mx-auto grid gap-3">
-          {allSocialData.map((contact, idx) => {
+          {resolvedData.map((contact, idx) => {
             const inner = (
               <div className={`glass-card rounded-2xl p-4 rainbow-border-bottom animate-reveal-up delay-${Math.min((idx + 1) * 100, 800)}`}>
                 <div className="flex items-center gap-4">
-                  <div className={`w-10 h-10 rounded-xl ${contact.iconBg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200`}>
-                    {contact.icon}
+                  <div className={`w-10 h-10 rounded-xl ${contact.icon_bg} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200`}>
+                    {getIcon(contact.icon_name, "w-4 h-4")}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
                       <h3 className="text-sm font-bold text-gray-800 dark:text-gray-100">{contact.platform}</h3>
-                      {"internal" in contact && contact.internal ? null : (
+                      {contact.link_type !== "internal" && (
                         <ExternalLink className="w-3 h-3 text-gray-300 dark:text-gray-600 group-hover:text-purple-400 transition-colors" />
                       )}
                     </div>
@@ -115,12 +69,12 @@ const SocialSection = () => {
               </div>
             );
 
-            return "internal" in contact && contact.internal ? (
-              <Link key={contact.platform} href={contact.url} className="block group">
+            return contact.link_type === "internal" ? (
+              <Link key={contact.id} href={contact.url} className="block group">
                 {inner}
               </Link>
             ) : (
-              <a key={contact.platform} href={contact.url} target="_blank" rel="noopener noreferrer" className="block group">
+              <a key={contact.id} href={contact.url} target="_blank" rel="noopener noreferrer" className="block group">
                 {inner}
               </a>
             );
