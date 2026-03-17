@@ -3,8 +3,16 @@ import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import CareerSection from "./components/CareerSection";
 import SocialSection from "./components/SocialSection";
+import { supabase } from "@/lib/supabase";
+import type { SocialLink } from "@/lib/types";
 
-export default function Home() {
+export default async function Home() {
+  const { data: socialData } = await supabase
+    .from("social_links")
+    .select("*")
+    .order("sort_order", { ascending: true })
+    .returns<SocialLink[]>();
+
   return (
     <>
       <Header />
@@ -12,7 +20,7 @@ export default function Home() {
         <AboutSection />
         <SkillsSection />
         <CareerSection />
-        <SocialSection />
+        <SocialSection socialData={socialData ?? []} />
       </main>
       <footer className="w-full relative">
         <div className="rainbow-divider" />
