@@ -47,6 +47,7 @@ const _skillIconColor = [
   "text-blue-500",
   "text-orange-500",
   "text-amber-600 dark:text-amber-400",
+  "text-orange-500 dark:text-orange-400",
 ];
 
 // Social: icon_bg
